@@ -8,7 +8,9 @@ A single-screen iOS app that renders a fully dynamic form from a local JSON payl
 
 
 
-https://github.com/user-attachments/assets/demo.mp4
+
+https://github.com/user-attachments/assets/04649321-5e68-4d9f-a860-09e697505378
+
 
 ---
 
