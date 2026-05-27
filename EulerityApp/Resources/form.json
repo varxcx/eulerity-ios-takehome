@@ -1,0 +1,124 @@
+{
+    "theme": {
+      "background_color": "#F5EFE6",
+      "text_color": "#3F352D",
+      "border_color": "#D9CCBC",
+      "error_color": "#C85C5C"
+    },
+  "form_title": "Launch Campaign",
+  "fields": [
+    {
+      "id": "campaign_name",
+      "order": 1,
+      "type": "TEXT",
+      "subtype": "PLAIN",
+      "label": "Campaign Name",
+      "placeholder": "e.g., Summer Sale 2026",
+      "max_length": 40,
+      "required": true,
+      "error_message": "Give your campaign a name."
+    },
+    {
+      "id": "campaign_goal",
+      "order": 2,
+      "type": "DROPDOWN",
+      "label": "Campaign Goal",
+      "allow_multiple": false,
+      "required": true,
+      "error_message": "Select a goal.",
+      "options": [
+        { "id": "goal_awareness",    "label": "Brand Awareness" },
+        { "id": "goal_traffic",      "label": "Drive Website Traffic" },
+        { "id": "goal_leads",        "label": "Generate Leads" },
+        { "id": "goal_conversions",  "label": "Boost Conversions" },
+        { "id": "goal_foottraffic",  "label": "Increase Foot Traffic" }
+      ]
+    },
+    {
+      "id": "ad_networks",
+      "order": 3,
+      "type": "DROPDOWN",
+      "label": "Ad Networks",
+      "allow_multiple": true,
+      "default_values": ["net_meta", "net_google"],
+      "required": true,
+      "error_message": "Select at least one network.",
+      "options": [
+        { "id": "net_google",    "label": "Google Search" },
+        { "id": "net_meta",      "label": "Meta Platforms" },
+        { "id": "net_tiktok",    "label": "TikTok Ads" },
+        { "id": "net_youtube",   "label": "YouTube" },
+        { "id": "net_linkedin",  "label": "LinkedIn" },
+        { "id": "net_snapchat",  "label": "Snapchat" }
+      ]
+    },
+    {
+      "id": "target_locations",
+      "order": 4,
+      "type": "TEXT",
+      "subtype": "PLAIN",
+      "label": "Target Locations",
+      "placeholder": "e.g., New York, NY · Chicago, IL",
+      "required": true,
+      "error_message": "Enter at least one location."
+    },
+    {
+      "id": "daily_budget",
+      "order": 5,
+      "type": "TEXT",
+      "subtype": "NUMBER",
+      "label": "Daily Budget ($)",
+      "placeholder": "e.g., 250",
+      "required": true,
+      "error_message": "Enter a daily budget."
+    },
+    {
+      "id": "campaign_url",
+      "order": 6,
+      "type": "TEXT",
+      "subtype": "URI",
+      "label": "Landing Page URL",
+      "placeholder": "https://yourbrand.com/campaign",
+      "required": true,
+      "error_message": "Enter a valid URL.",
+      "regex_pattern": "^https?://.+"
+    },
+    {
+      "id": "campaign_notes",
+      "order": 7,
+      "type": "TEXT",
+      "subtype": "MULTILINE",
+      "label": "Creative Notes",
+      "placeholder": "Describe your target audience, tone, key message...",
+      "max_length": 200,
+      "required": false
+    },
+    {
+      "id": "enable_retargeting",
+      "order": 8,
+      "type": "TOGGLE",
+      "label": "Enable Retargeting",
+      "required": false
+    },
+    {
+      "id": "enable_ai_optimize",
+      "order": 9,
+      "type": "TOGGLE",
+      "label": "AI Budget Optimisation",
+      "required": false
+    },
+    {
+      "id": "accept_legal",
+      "order": 10,
+      "type": "CHECKBOX",
+      "label": "I agree to the Terms of Service and Ad Policy.",
+      "required": true,
+      "error_message": "You must accept the terms.",
+      "metadata": {
+        "Terms of Service": "https://example.com/terms",
+        "Ad Policy": "https://example.com/ad-policy"
+      },
+      "clickable_text_color": "#A78BFA"
+    }
+  ]
+}
